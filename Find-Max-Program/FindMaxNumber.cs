@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Find_Max_Program
 {
-    class FindMaxNumber
+    public class FindMaxNumber
     {
         /// <summary>
         /// UC1-Find Maximum of 3 integers 
@@ -15,13 +15,13 @@ namespace Find_Max_Program
         /// <returns></returns>
         public static int FindMax(int firstNum, int secondNum, int thirdNum)
         {
-            if(firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) > 0) ||
-                firstNum.CompareTo(secondNum) >= 0 && (firstNum.CompareTo(thirdNum) > 0)||
-                firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) >= 0)) 
+            if (firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) > 0) ||
+                firstNum.CompareTo(secondNum) >= 0 && (firstNum.CompareTo(thirdNum) > 0) ||
+                firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) >= 0))
             {
                 return firstNum;
             }
-            if(secondNum.CompareTo(firstNum) > 0 && (secondNum.CompareTo(thirdNum) > 0) ||
+            if (secondNum.CompareTo(firstNum) > 0 && (secondNum.CompareTo(thirdNum) > 0) ||
                 secondNum.CompareTo(firstNum) >= 0 && (secondNum.CompareTo(thirdNum) > 0) ||
                 secondNum.CompareTo(firstNum) > 0 && (secondNum.CompareTo(thirdNum) >= 0))
             {
