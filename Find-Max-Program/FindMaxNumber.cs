@@ -5,7 +5,7 @@ namespace Find_Max_Program
     public class FindMaxNumber
     {
         /// <summary>
-        /// UC1-Find Maximum of 3 integers 
+        /// UC2-Find Maximum of 3 Floats using Method Overloading polymorphism 
         /// </summary>
         /// <param name="firstNum"></param>
         /// <param name="secondNum"></param>
