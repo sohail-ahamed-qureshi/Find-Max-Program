@@ -57,6 +57,29 @@ namespace Find_Max_Program
             return default;
         }
 
+        public static string FindMax(string firstNum, string secondNum, string thirdNum)
+        {
+            if (firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) > 0) ||
+                firstNum.CompareTo(secondNum) >= 0 && (firstNum.CompareTo(thirdNum) > 0) ||
+                firstNum.CompareTo(secondNum) > 0 && (firstNum.CompareTo(thirdNum) >= 0))
+            {
+                return firstNum;
+            }
+            if (secondNum.CompareTo(firstNum) > 0 && (secondNum.CompareTo(thirdNum) > 0) ||
+                secondNum.CompareTo(firstNum) >= 0 && (secondNum.CompareTo(thirdNum) > 0) ||
+                secondNum.CompareTo(firstNum) > 0 && (secondNum.CompareTo(thirdNum) >= 0))
+            {
+                return secondNum;
+            }
+            if (thirdNum.CompareTo(firstNum) > 0 && (thirdNum.CompareTo(secondNum) > 0) ||
+                thirdNum.CompareTo(firstNum) >= 0 && (thirdNum.CompareTo(secondNum) > 0) ||
+                thirdNum.CompareTo(firstNum) > 0 && (thirdNum.CompareTo(secondNum) >= 0))
+            {
+                return thirdNum;
+            }
+            return default;
+        }
+
 
     }
 }

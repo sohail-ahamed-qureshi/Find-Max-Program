@@ -11,7 +11,7 @@ namespace Find_Max_Program
         static void Main(string[] args)
         {
             Console.WriteLine("Find Maximum of Numbers program");
-           float maxNum = FindMaxNumber.FindMax(0.2f, 0.1f, 0.0f);
+           string maxNum = FindMaxNumber.FindMax("Apple", "Banana", "Peach");
             Console.WriteLine(maxNum);
         }
     }
