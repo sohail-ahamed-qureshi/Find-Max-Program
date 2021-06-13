@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Find_Max_Program
 {
     public class FindMaxNumber
     {
         /// <summary>
-        /// UC2-Find Maximum of 3 Floats using Method Overloading polymorphism 
+        /// UC4-Find Maximum of 3 Generic data types using Method Overloading polymorphism 
         /// </summary>
         /// <param name="firstNum"></param>
         /// <param name="secondNum"></param>
@@ -74,6 +75,29 @@ namespace Find_Max_Program
             if (thirdNum.CompareTo(firstNum) > 0 && (thirdNum.CompareTo(secondNum) > 0) ||
                 thirdNum.CompareTo(firstNum) >= 0 && (thirdNum.CompareTo(secondNum) > 0) ||
                 thirdNum.CompareTo(firstNum) > 0 && (thirdNum.CompareTo(secondNum) >= 0))
+            {
+                return thirdNum;
+            }
+            return default;
+        }
+
+        public static T FindMax<T>(T firstNum, T secondNum, T thirdNum)
+        {
+           if( Comparer<T>.Default.Compare(firstNum,secondNum) > 0 && Comparer<T>.Default.Compare(firstNum, thirdNum) > 0||
+           Comparer<T>.Default.Compare(firstNum,secondNum) > 0 && Comparer<T>.Default.Compare(firstNum, thirdNum) > 0||
+           Comparer<T>.Default.Compare(firstNum,secondNum) > 0 && Comparer<T>.Default.Compare(firstNum, thirdNum) > 0)
+            {
+                return firstNum;
+            }
+            if (Comparer<T>.Default.Compare(secondNum, firstNum) > 0 && Comparer<T>.Default.Compare(secondNum, thirdNum) > 0 ||
+           Comparer<T>.Default.Compare(secondNum, firstNum) > 0 && Comparer<T>.Default.Compare(secondNum, thirdNum) > 0 ||
+           Comparer<T>.Default.Compare(secondNum, firstNum) > 0 && Comparer<T>.Default.Compare(secondNum, thirdNum) > 0)
+            {
+                return secondNum;
+            }
+            if (Comparer<T>.Default.Compare(thirdNum, firstNum) > 0 && Comparer<T>.Default.Compare(thirdNum, secondNum) > 0 ||
+          Comparer<T>.Default.Compare(thirdNum, firstNum) > 0 && Comparer<T>.Default.Compare(thirdNum, secondNum) > 0 ||
+          Comparer<T>.Default.Compare(thirdNum, firstNum) > 0 && Comparer<T>.Default.Compare(thirdNum, secondNum) > 0)
             {
                 return thirdNum;
             }
